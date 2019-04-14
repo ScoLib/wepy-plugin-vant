@@ -7,7 +7,7 @@ import { normalize } from "upath";
 
 // 获取需要注入的组件
 const getInjectComponents = (globalConfig, pageConfig) => {
-  const targetPath = join("src", "components", TARGET_DIR_NAME);
+  const targetPath = join("src", TARGET_DIR_NAME);
   const components = readdirSync(targetPath).filter(component => (!COMPONENT_IGNORE[component] && component != VERSION_FILE_NAME));
 
   let globalInject = globalConfig.inject ? components : [];
@@ -16,9 +16,9 @@ const getInjectComponents = (globalConfig, pageConfig) => {
   }
 
   let vantConfig;
-  if (pageConfig.hasOwnProperty("vant")) {
-    vantConfig = pageConfig.vant;
-    delete pageConfig.vant;
+  if (pageConfig.hasOwnProperty("vant2")) {
+    vantConfig = pageConfig.vant2;
+    delete pageConfig.vant2;
   }
   return [...new Set(globalInject.concat(vantConfig))].filter(component => component);
 };
@@ -34,7 +34,7 @@ const injectComponents = (op, setting) => {
     const relativePath = relative(dirname(op.file), resolve("dist/")); // 获取相对的路径
     pageConfig.usingComponents = pageConfig.usingComponents || {};
     injectComponents.forEach(component => {
-      pageConfig.usingComponents[globalConfig.prefix + component] = normalize(relativePath) + "/components/" + TARGET_DIR_NAME + "/" + component + "/index";
+      pageConfig.usingComponents[globalConfig.prefix + component] = normalize(relativePath) + "/" + TARGET_DIR_NAME + "/" + component + "/index";
     });
 
     op.code = JSON.stringify(pageConfig); // 更新文件内容

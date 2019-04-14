@@ -1,6 +1,6 @@
 {
   "name": "wepy-plugin-vant2",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "A wepy plugin for vant-weapp",
   "main": "dist/index.js",
   "scripts": {

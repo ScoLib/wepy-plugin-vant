@@ -4,7 +4,7 @@ const webpack = require("webpack");
 
 module.exports = {
   target: "node",
-  entry: ["babel-polyfill", path.resolve(__dirname, "src", "index.js")],
+  entry: [path.resolve(__dirname, "src", "index.js")],
   externals: {
     "postcss": "postcss",
     "postcss-px2units": "postcss-px2units"

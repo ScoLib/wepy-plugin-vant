@@ -12,7 +12,7 @@ export const DEFAULT_CONFIG = {
   pagePath: "pages",
   config: {
     inject: true,
-    prefix: "van",
+    prefix: "van-",
     px2: {
       isVantOnly: false,
       relative: 400,
