@@ -1,6 +1,6 @@
 {
   "name": "wepy-plugin-vant2",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A wepy plugin for vant-weapp",
   "main": "dist/index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ScoLib/wepy-plugin-vant2.git"
+    "url": "git+https://github.com/ScoLib/wepy-plugin-vant.git"
   },
   "keywords": [
     "wepy",
@@ -24,12 +24,12 @@
     "mini-app",
     "wechat-app"
   ],
-  "author": "vm0100",
+  "author": "klghd",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ScoLib/wepy-plugin-vant2/issues"
+    "url": "https://github.com/ScoLib/wepy-plugin-vant/issues"
   },
-  "homepage": "https://github.com/ScoLib/wepy-plugin-vant2#readme",
+  "homepage": "https://github.com/ScoLib/wepy-plugin-vant#readme",
   "dependencies": {
     "postcss-px2units": "^0.1.1",
     "wepy-vant": "^1.0.2"
